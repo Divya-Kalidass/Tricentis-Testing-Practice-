@@ -12,11 +12,12 @@ import static org.example.BrowserInitiation.driver;
 public class TestRunnerClass {
 
     @BeforeTest
-    public void lauchBrowser(){
+    public void lauchBrowser() throws Exception{
         FunctionUtility.reportGeneration();
         FunctionUtility.configureReport();
         BrowserInitiation.initiateBrowser("chrome");
-
+        BrowserInitiation.launchURL("https://sampleapp.tricentis.com/101/app.php#");
+        Thread.sleep(5000);
 
     }
 //     @Test(dataProvider = "testdata", priority = 2,dataProviderClass = DataDriven.class)

@@ -28,7 +28,7 @@ public class ProductData {
             // System.setProperty("webdriver.chrome.driver", "Path of Chrome Driver");
 //            driver = new ChromeDriver();
 //            driver.get("https://sampleapp.tricentis.com/101/app.php#");
-            BrowserInitiation.launchURL(url);
+
             Actions action = new Actions(driver);
             try {
                 index_menu = driver.findElement(By.linkText("Enter Product Data"));
