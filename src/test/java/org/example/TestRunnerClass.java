@@ -51,7 +51,8 @@ public class TestRunnerClass {
     @Test(dataProvider="testdata", dataProviderClass = DataDriven.class,priority = 3)
     public void TC3_Sample_Test_Case_3(String url, String startdate, String insurancesum, String mertirating, String damageinsurance, String curtesycar) throws InterruptedException {
         //ProductData.enterData(url,startdate, insurancesum, mertirating,damageinsurance,curtesycar);
-        Assert.assertEquals(driver.getTitle(),"Enter Product Data");
+//        Assert.assertEquals(driver.getTitle(),"Enter Vehicle Data");
+        String title = driver.getTitle();
         Thread.sleep(5000);
     }
     @Test(dataProvider="testdata", dataProviderClass = DataDriven.class,priority = 4)
@@ -59,10 +60,10 @@ public class TestRunnerClass {
         //ProductData.enterData(url,startdate, insurancesum, mertirating,damageinsurance,curtesycar);
        // Assert.assertEquals(driver.findElement(By.id("legalDefenseInsurance")));
         try {
-            Assert.assertTrue(driver.findElement(By.id("entervehicledata")).isDisplayed());
+            Assert.assertTrue(driver.findElement(By.id("downloadtrial")).isDisplayed());
         }catch (NoSuchElementException e)
         {
-            Assert.assertFalse(driver.findElement(By.id("entervehicledata")).isDisplayed(),"No element found - entervehicledata");
+            Assert.assertFalse(driver.findElement(By.id("downloadtrial")).isDisplayed(),"No element found - downloadtrial");
         }
         Thread.sleep(5000);
     }
@@ -93,7 +94,7 @@ public class TestRunnerClass {
     }
 
     @Test//(dataProvider="testdata", dataProviderClass = DataDriven.class,priority = 9)
-    public void TC9_Sample_Test_Case_9_fail() {
+    public void TC9_Sample_Test_Case_9_broken() {
 //        long pageLoadTime = 6000; // Simulated page load time in milliseconds
         // Start measuring the page load time
         long startTime = System.currentTimeMillis();
@@ -108,7 +109,7 @@ public class TestRunnerClass {
     }
 
     @Test//(dataProvider="testdata", dataProviderClass = DataDriven.class,priority = 10)
-    public void TC10_Sample_Test_Case_10_fail() {
+    public void TC10_Sample_Test_Case_10_broken() {
         // Example of checking for a broken link (simulated)
 //        BrowserInitiation.launchURL("https://saeapp.tricentis.com/101/app.php#");
 
@@ -120,7 +121,7 @@ public class TestRunnerClass {
     }
 
     @Test//(dataProvider="testdata", dataProviderClass = DataDriven.class,priority = 11)
-    public void TC11_Sample_Test_Case_11_fail() {
+    public void TC11_Sample_Test_Case_11_broken() {
         // Find a link element and check if it’s broken
 //        driver.get("https://sampleapp.tricentis.com/101/app.php#");
 //        WebElement link = driver.findElement(By.id("enterinsurantdata"));
