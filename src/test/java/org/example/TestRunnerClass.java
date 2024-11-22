@@ -94,7 +94,7 @@ public class TestRunnerClass {
     }
 
     @Test//(dataProvider="testdata", dataProviderClass = DataDriven.class,priority = 9)
-    public void TC9_Sample_Test_Case_9_broken() {
+    public void TC9_Sample_Test_Case_9_fail() {
 //        long pageLoadTime = 6000; // Simulated page load time in milliseconds
         // Start measuring the page load time
         long startTime = System.currentTimeMillis();
@@ -109,7 +109,7 @@ public class TestRunnerClass {
     }
 
     @Test//(dataProvider="testdata", dataProviderClass = DataDriven.class,priority = 10)
-    public void TC10_Sample_Test_Case_10_broken() {
+    public void TC10_Sample_Test_Case_10_fail() {
         // Example of checking for a broken link (simulated)
 //        BrowserInitiation.launchURL("https://saeapp.tricentis.com/101/app.php#");
 
@@ -121,7 +121,7 @@ public class TestRunnerClass {
     }
 
     @Test//(dataProvider="testdata", dataProviderClass = DataDriven.class,priority = 11)
-    public void TC11_Sample_Test_Case_11_broken() {
+    public void TC11_Sample_Test_Case_11_fail() {
         // Find a link element and check if it’s broken
 //        driver.get("https://sampleapp.tricentis.com/101/app.php#");
 //        WebElement link = driver.findElement(By.id("enterinsurantdata"));
@@ -136,7 +136,7 @@ public class TestRunnerClass {
 
 
     @Test//(dataProvider="testdata", dataProviderClass = DataDriven.class,priority = 12)
-    public void TC12_Sample_Test_Case_12_fail() {
+    public void TC12_Sample_Test_Case_12_broken() {
 //        WebDriver driver = new ChromeDriver();
 //        driver.get("https://sampleapp.tricentis.com/101/app.php#");
 //        Assert.assertEquals(driver.getTitle(),"Sample App");
@@ -144,7 +144,7 @@ public class TestRunnerClass {
         driver.findElement(By.id("enterproduct"));
     }
     @Test(dataProvider="testdata", dataProviderClass = DataDriven.class,priority = 13)
-    public void TC13_Sample_Test_Case_13_fail(String url,String startdate, String insurancesum,String mertirating, String damageinsurance, String curtesycar) throws InterruptedException {
+    public void TC13_Sample_Test_Case_13_broken(String url,String startdate, String insurancesum,String mertirating, String damageinsurance, String curtesycar) throws InterruptedException {
         //ProductData.enterData(url,startdate, insurancesum, mertirating,damageinsurance,curtesycar);
         driver.findElement(By.id("search_btn"));
 //        Assert.assertEquals(driver.getCurrentUrl(),"https://sample.tricentis.com/101/app.php#");
@@ -152,7 +152,7 @@ public class TestRunnerClass {
     }
 
     @Test(dataProvider="testdata", dataProviderClass = DataDriven.class,priority = 14)
-    public void TC14_Sample_Test_Case_14_fail(String url,String startdate, String insurancesum,String mertirating, String damageinsurance, String curtesycar) throws InterruptedException {
+    public void TC14_Sample_Test_Case_14_broken(String url,String startdate, String insurancesum,String mertirating, String damageinsurance, String curtesycar) throws InterruptedException {
         //ProductData.enterData(url,startdate, insurancesum, mertirating,damageinsurance,curtesycar);
       Assert.assertTrue(driver.findElement(By.linkText("Enter Insurant")).isDisplayed());
     }
