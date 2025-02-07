@@ -9,6 +9,8 @@
                     <include name='TC3_Sample_Test_Case_3'/>
                     <include name='TC4_Sample_Test_Case_4'/>
                     <include name='TC5_Sample_Test_Case_5'/>
+                    <include name='TC10_Sample_Test_Case_10_fail'/>
+                    <include name='TC11_Sample_Test_Case_11_fail'/>
                 </methods>
             </class>
         </classes>
